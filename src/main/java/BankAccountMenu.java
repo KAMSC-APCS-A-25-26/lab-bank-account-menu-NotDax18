@@ -21,9 +21,10 @@ public class BankAccountMenu {
                 double add = scan.nextDouble();
                 if (0 <= add) {
                     System.out.println("added $" + add);
+                    accountValue = accountValue + add;
                 } else
                     System.out.println("error");
-                accountValue = accountValue + add;
+
                 System.out.println("New Balance: $" + accountValue);
                 break;
 
