@@ -6,7 +6,7 @@ public class BankAccountMenu {
         boolean menu = true;
         double accountValue = 0.00;
         while (menu) {
-            System.out.println("—- Bank Account Menu —");
+            System.out.println("--- Bank Account Menu ---");
         System.out.println("1. Add Money");
         System.out.println("2. Withdraw Money");
             System.out.println("3. Check Balance");
@@ -17,10 +17,10 @@ public class BankAccountMenu {
 
         switch (choice) {
             case 1:
-                System.out.print("how much do you want to add?: ");
+                System.out.print("Enter amount to add: ");
                 double add = scan.nextDouble();
                 if (0 <= add) {
-                    System.out.println("added $" + add);
+                    System.out.println("Added $" + add);
                     accountValue = accountValue + add;
                 } else
                     System.out.println("error");
@@ -29,7 +29,7 @@ public class BankAccountMenu {
                 break;
 
             case 2:
-                System.out.print("How much do you want to withdraw?: ");
+                System.out.print("Enter amount to withdraw: ");
                 double sub = scan.nextDouble();
                 if (accountValue < sub) {
                     System.out.println("withdrew $” + sub");
@@ -38,7 +38,7 @@ public class BankAccountMenu {
                 break;
 
             case 3:
-                System.out.println("Your balance is: $" + accountValue);
+                System.out.println("Current balance: $" + accountValue);
                 break;
 
             case 4:
