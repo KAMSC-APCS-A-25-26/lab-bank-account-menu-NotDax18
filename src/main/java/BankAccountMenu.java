@@ -19,7 +19,7 @@ public class BankAccountMenu {
             case 1:
                 System.out.print("Enter amount to add: ");
                 double add = scan.nextDouble();
-                if (0 <= add) {
+                if (0 < add) {
                     System.out.println("Added $" + add);
                     accountValue = accountValue + add;
                 } else
@@ -31,10 +31,11 @@ public class BankAccountMenu {
             case 2:
                 System.out.print("Enter amount to withdraw: ");
                 double sub = scan.nextDouble();
-                if (accountValue < sub) {
-                    System.out.println("withdrew $” + sub");
+                if (accountValue >= sub) {
+                    accountValue = accountValue - sub;
+                    System.out.println("withdrew $" + sub);
                 } else
-                    System.out.println(accountValue);
+                    System.out.println("Insufficient funds");
                 break;
 
             case 3:
