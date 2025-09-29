@@ -34,6 +34,7 @@ public class BankAccountMenu {
                 if (accountValue >= sub) {
                     accountValue = accountValue - sub;
                     System.out.println("withdrew $" + sub);
+                    System.out.println("New Balance: $" + accountValue);
                 } else
                     System.out.println("Insufficient funds");
                 break;
